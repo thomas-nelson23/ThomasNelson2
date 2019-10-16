@@ -50,15 +50,23 @@ nav a {
 .burger {
   position: absolute;
   transform: translateX(-45vw) translateY(12px);
-  font-size: 40px !important; /* 48px - Gives a nice 'clickable' target as per: https://material.io/design/layout/spacing-methods.html#touch-targets */
+  font-size: 40px; /* 48px - Gives a nice 'clickable' target as per: https://material.io/design/layout/spacing-methods.html#touch-targets */
 }
 
+footer a:visited {
+  color: var(--another);
+}
 
 h1 {
   font-family: cabin;
   font-weight: 100;
+  color: var(--another);
   justify-content: center;
   font-size: 5vw;
+}
+
+h2 {
+  color: var(--another);
 }
 
 figure {
@@ -137,3 +145,25 @@ footer {
   height: 0;
 }
 
+@media screen and (min-width: 768px) {
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .is-hidden--tablet {
+    font-size: 0;
+    height: 0;
+  }
+
+  .is-shown--tablet {
+    font-size: initial;
+    height: 100%; /* Take as much height as needed within the parent. */
+  }
+
+  #navigation {
+    flex-direction: row;
+    transform: translateY(13px);
+  }
+}
