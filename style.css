@@ -56,7 +56,9 @@ nav a {
 
 h1 {
   font-family: cabin;
+  font-weight: 100;
   justify-content: center;
+  font-size: 5vw;
 }
 
 figure {
