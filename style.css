@@ -1,0 +1,137 @@
+:root {
+  --primary: #ABA9BF;
+  --secondary: #443b41;
+  --nother: rgba(175, 60, 131, 0.301);
+  --another: #38023B;
+  --mooja: #CEFDFF;
+
+}
+
+
+body {
+  font-family: "Turret Road";
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary);
+  text-align: center;
+  margin: 0;
+}
+
+
+
+
+Li {
+  margin: 10px;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+nav {
+  background-color: var(--nother);
+  min-height: 60px;
+}
+
+#navigation { 
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 0px;
+}
+
+ul {
+  padding: 0px;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+.burger {
+  position: absolute;
+  transform: translateX(-45vw) translateY(12px);
+  font-size: 40px !important; /* 48px - Gives a nice 'clickable' target as per: https://material.io/design/layout/spacing-methods.html#touch-targets */
+}
+
+
+h1 {
+  font-family: cabin;
+  justify-content: center;
+}
+
+figure {
+  margin: 0px;
+}
+
+img#head {
+width: 20vw;
+height: 20vw;
+  border-radius: 100%;
+  margin-top: 40px;
+  margin: 0px;
+  margin-top: 40px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 300px;
+  background-image: url(/photo.jpg);
+  background-size: cover;
+  justify-content: center;
+  align-content: center;
+}
+
+.btn {
+  text-decoration: none;
+  color: var(--primary);
+  background-color: var(--another);
+  padding: 0.8rem;
+  width: 100px;
+  margin: auto;
+}
+
+header {
+  justify-content: center;
+  display: flex;
+  background-color: var(--primary);
+  opacity: 0.8;
+  flex-direction: column;
+}
+
+header h1 {
+  opacity: 1;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+footer {
+  flex-direction: column;
+  display: flex;
+
+  justify-content: center;
+  font-size: 2em;
+  text-align: center;
+  position: inherit;
+  padding-bottom: 30px;
+}
+
+.gitLink {
+  display: flex;
+  justify-content: center;
+  align-content: baseline;
+  margin: 50px;
+  position: inherit;
+}
+
+/* utility classes */
+.is-hidden--mobile {
+  font-size: 0;
+  height: 0;
+}
+
