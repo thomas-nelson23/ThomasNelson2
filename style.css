@@ -4,7 +4,14 @@
   --nother: rgba(175, 60, 131, 0.301);
   --another: #38023B;
   --mooja: #CEFDFF;
+}
 
+footer a:visited {
+  color: var(--another);
+}
+
+a:link {
+  color: var(--secondary);
 }
 
 
@@ -18,15 +25,38 @@ body {
   margin: 0;
 }
 
-
-
-
-Li {
-  margin: 10px;
-  list-style-type: none;
-  text-decoration: none;
-  
+header {
+  justify-content: center;
+  display: flex;
+  background-color: var(--primary);
+  opacity: 0.8;
+  flex-direction: column;
+  align-content: center;
 }
+
+h1 {
+  font-family: comfortaa;
+  font-weight: 100;
+  color: var(--another);
+  justify-content: center;
+  font-size: calc(20px + 2.5vw);;
+  margin: 0;
+}
+
+img#head {
+  width: 12vw;
+  height: 12vw;
+  border-radius: 100%;
+  margin: 0px;
+  margin-top: 20px;
+  min-width: 150px;
+  min-height: 150px;
+}
+
+figure {
+  margin: 0px;
+}
+
 
 nav {
   background-color: var(--nother);
@@ -44,6 +74,13 @@ ul {
   padding: 0px;
 }
 
+Li {
+  margin: 10px;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+
 nav a {
   text-decoration: none;
 }
@@ -54,40 +91,12 @@ nav a {
   font-size: 40px; /* 48px - Gives a nice 'clickable' target as per: https://material.io/design/layout/spacing-methods.html#touch-targets */
 }
 
-footer a:visited {
-  color: var(--another);
-}
-
-a:link {
-  color: var(--secondary);
-}
-
-h1 {
-  font-family: comfortaa;
-  font-weight: 100;
-  color: var(--another);
-  justify-content: center;
-  font-size: 5vw;
-}
 
 h2 {
   color: var(--another);
   margin-top: 50px;
 }
 
-figure {
-  margin: 0px;
-}
-
-img#head {
-width: 20vw;
-height: 20vw;
-  border-radius: 100%;
-  
-  margin: 0px;
-  margin-top: 40px;
-
-}
 
 .hero {
   display: flex;
@@ -100,6 +109,11 @@ height: 20vw;
   align-content: center;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
 .btn {
   text-decoration: none;
   color: var(--primary);
@@ -107,26 +121,15 @@ height: 20vw;
   padding: 0.8rem;
   width: 100px;
   margin: auto;
- 
 }
 
 .btn--read {
-  margin-top: 100px;
+  margin-top: 20px;
   background-color: var(--nother);
   color: black;
+  max-width: 150px;
 }
 
-header {
-  justify-content: center;
-  display: flex;
-  background-color: var(--primary);
-  opacity: 0.8;
-  flex-direction: column;
-}
-
-header h1 {
-  opacity: 1;
-}
 
 main {
   display: flex;
@@ -154,11 +157,15 @@ footer {
   position: inherit;
 }
 
+
+
 /* utility classes */
 .is-hidden--mobile {
   font-size: 0;
   height: 0;
 }
+
+
 
 
 /* TABLET VIEW INFORMATION */
@@ -174,9 +181,14 @@ footer {
     height: 0;
   }
 
+
   .is-shown--tablet {
     font-size: initial;
     height: 100%; /* Take as much height as needed within the parent. */
+  }
+
+  img#head {
+    margin-top: 10px;
   }
 
   #navigation {
@@ -198,6 +210,11 @@ footer {
   }
 }
 
+
+
+
+
+
 /* DESKTOP VIEW INFORMATION */
 @media screen and (min-width: 1024px) {
 
@@ -207,6 +224,7 @@ footer {
 
   header {
     flex-direction: row;
+    align-content: center;
     justify-content: space-evenly;
   }
 
@@ -224,6 +242,13 @@ footer {
     padding: 20px;
   }
 
+  img#head {
+    margin: auto;
+    margin-top: 30px;
+    height: 200px;
+    width: 200px;
+  }
+
   nav {
     min-height: 100px;
   }
@@ -236,4 +261,23 @@ footer {
   img#head {
     margin-bottom: 40px;
   }
+
+  .btn--read {
+    margin-bottom: 0px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+
+section p:last-of-type {
+  margin-bottom: auto;
+}
+
+.btn--read {
+  margin-top: 60px;
+}
+
+
 }
