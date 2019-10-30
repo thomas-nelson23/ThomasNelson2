@@ -6,19 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Blog</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Display|Turret+Road&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Notable&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bac0ea1163.js" ; crossorigin="anonymous" ;></script>
 </head>
 
 <body>
-    <h1>Blog</h1>
-    <ul>
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="/about/index.html">About</a></li>
-        <li><a href="/blog/index.html">Blog</a></li>
-        <li><a href="/contact/index.html">Contact</a></li>
-        <li><a href="/projects/index.html">Projects</a></li>
-    </ul>
+    <header>
+        <h1>Blog</h1>
+    </header>
+
+    <nav class="is-hidden--mobile">
+
+        <span class="fas burger fa-bars is-hidden--tablet"></span>
+
+        <ul id="navigation" class="is-shown--tablet">
+            <a href="/index.html">
+                <li class=navLi>Home</li>
+            </a>
+            <a href="/about/index.html">
+                <li class=navLi>About</li>
+            </a>
+            <a href="#">
+                <li class=navLi>Blog</li>
+            </a>
+            <a href="/projects/index.html">
+                <li class=navLi>Projects</li>
+            </a>
+            <a href="/contact/index.html">
+                <li class=navLi>Contact</li>
+            </a>
+        </ul>
+    </nav>
 
     <div id="blogDiv"></div>
+
+    <footer>
+        <br />
+        <a href="https://github.com/thomas-nelson23" target="blank">Github<i class="fab fa-github"></i></a>
+
+        2019 Savvy Coders
+    </footer>
+
     <script src="blog.js"></script>
 </body>
 

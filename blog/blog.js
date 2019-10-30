@@ -71,7 +71,7 @@ var bloggy = document.getElementById("blogDiv");
 
 for (var indexer = 0; indexer < blogArray.length; indexer++) {
     var blogTitle = blogArray[indexer].title.toUpperCase();
-    var subtitle = blogArray[indexer].subtitle.to;
+    var subtitle = blogArray[indexer].subtitle;
     var dateComplete = blogArray[indexer].dateComplete;
     var description = blogArray[indexer].description;
     var technologiesUsed = blogArray[indexer].technologiesUsed;
@@ -79,13 +79,13 @@ for (var indexer = 0; indexer < blogArray.length; indexer++) {
     var netlifyUrl = blogArray[indexer].netlifyUrl;
     var githubUrl = blogArray[indexer].githubUrl;
 
-    bloggy.innerHTML += `<div class='entryDiv'><hr><h2>${blogTitle}</h2>
+    bloggy.innerHTML += `<div class='entryDiv'><h2>${blogTitle}</h2>
         <h3>${subtitle}</h3>
         <strong>finished on ${dateComplete}</strong>
         <p>${description}</p>
         <div class='entryDetails'><p>Technologies used: ${technologiesUsed}</p>
         <p>Project highlights: ${projectHighlights}</p>
         <a href='${netlifyUrl}'><i class="fas fa-child"></i>view project</a><br>
-            <a href='${githubUrl}'><i class="fab fa-github-alt"></i>view code</a></div> 
+            <a href='${githubUrl}'><i class="fab fa-github-alt"></i>view code</a><br><hr></div> 
         </div>`;
 }
