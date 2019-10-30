@@ -70,7 +70,7 @@ const blogArray = [
 var bloggy = document.getElementById("blogDiv");
 
 for (var indexer = 0; indexer < blogArray.length; indexer++) {
-    var blogTitle = blogArray[indexer].title;
+    var blogTitle = blogArray[indexer].title.toUpperCase();
     var subtitle = blogArray[indexer].subtitle;
     var dateComplete = blogArray[indexer].dateComplete;
     var description = blogArray[indexer].description;
