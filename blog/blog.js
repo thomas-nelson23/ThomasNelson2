@@ -71,7 +71,7 @@ var bloggy = document.getElementById("blogDiv");
 
 for (var indexer = 0; indexer < blogArray.length; indexer++) {
     var blogTitle = blogArray[indexer].title.toUpperCase();
-    var subtitle = blogArray[indexer].subtitle;
+    var subtitle = blogArray[indexer].subtitle.to;
     var dateComplete = blogArray[indexer].dateComplete;
     var description = blogArray[indexer].description;
     var technologiesUsed = blogArray[indexer].technologiesUsed;
