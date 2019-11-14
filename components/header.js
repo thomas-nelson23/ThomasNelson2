@@ -3,6 +3,7 @@ export default (st) => `
         <figure>
             <img id="head" src="/powder.jpg" alt="" width="500" height="500">
         </figure>
-        <h1>${st.heading}</h1>
+        <h1>${st.title}</h1>
     </header>
 `
+

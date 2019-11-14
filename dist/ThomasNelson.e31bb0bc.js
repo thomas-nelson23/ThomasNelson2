@@ -126,7 +126,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _default = function _default(st) {
-  return "\n    <header>\n        <figure>\n            <img id=\"head\" src=\"/powder.jpg\" alt=\"\" width=\"500\" height=\"500\">\n        </figure>\n        <h1>".concat(st.heading, "</h1>\n    </header>\n");
+  return "\n    <header>\n        <figure>\n            <img id=\"head\" src=\"/powder.jpg\" alt=\"\" width=\"500\" height=\"500\">\n        </figure>\n        <h1>".concat(st.title, "</h1>\n    </header>\n");
 };
 
 exports.default = _default;
@@ -151,6 +151,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
+// import * as 
 var _default = function _default(st) {
   return "\n    <main>\n        ".concat(st.mainContent, "\n    </main>\n");
 };
@@ -209,19 +210,315 @@ var _main = _interopRequireDefault(require("./main"));
 var _footer = _interopRequireDefault(require("./footer"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./header":"components/header.js","./nav":"components/nav.js","./main":"components/main.js","./footer":"components/footer.js"}],"index.js":[function(require,module,exports) {
+},{"./header":"components/header.js","./nav":"components/nav.js","./main":"components/main.js","./footer":"components/footer.js"}],"components/views/about.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _default = function _default(st) {
+  "\n        <h1>About landing page</h1>\n    ";
+};
+
+exports.default = _default;
+},{}],"components/views/blog.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _default = function _default(st) {
+  "\n        <h3>".concat(st.title, "</h3>\n        <div id=\"blogDiv\"></div>\n    ");
+};
+
+exports.default = _default;
+},{}],"components/views/home.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _default = function _default(st) {
+  "\n        <h1>".concat(st.title, "</h1>\n    ");
+};
+
+exports.default = _default;
+},{}],"components/views/contact.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _default = function _default(st) {
+  "\n        <main class=\"container\">\n\n        <h4>form</h4>\n\n        <form name=\"contact\" method=\"POST\" data-netlify=\"true\">\n            <div>\n                <label for=\"name\">Name: </label>\n                <input type=\"text\" name=\"name\" id=\"name\" placeholder=\"Full Name\">\n            </div>\n            <div>\n                <label for=\"email\">Email: </label>\n                <input type=\"text\" name=\"email\" id=\"email\" placeholder=\"you@somewhere.com\">\n            </div>\n            <div>\n                <label for=\"phone\">Phone: </label>\n                <input type=\"tel\" name=\"phone\" id=\"phone\">\n            </div>\n            <div>\n                <label for=\"message\">Enter your message: </label>\n                <textarea name=\"msg\" id=\"msg\" cols=\"30\" rows=\"10\"></textarea>\n            </div>\n\n            <p>What's this message about?</p>\n\n            <div>\n                <input type=\"radio\" name=\"subject\" value=\"professional\" id=\"pro\" checked>\n                <label for=\"pro\">I'd like to hire you!</label>\n            </div>\n\n            <div>\n                <input type=\"radio\" name=\"subject\" value=\"personal\" id=\"personal\">\n                <label for=\"personal\">Personal message</label>\n            </div>\n\n            <div>\n                <input type=\"radio\" name=\"subject\" value=\"other\">\n                <label>Don't know/something else</label>\n            </div>\n\n            <div>\n                <input type=\"checkbox\" name=\"optin\" value=\"trusting\" id=\"news\" checked>\n                <label for=\"news\">Subscribe me to your newsletter!</label>\n            </div>\n\n\n            <div>\n                <label for=\"marketing\">How did you hear about me?</label>\n                <select name=\"marketing\">\n                    <optgroup label=\"Online\">\n                        <option value=\"social\">Social Media (FB, Twitter, LinkedIn)</option>\n                        <option value=\"github\">Online Portfolio (GitHub)</option>\n                        <option value=\"search\">Search Engine</option>\n                        <option value=\"email\">Email</option>\n                    </optgroup>\n                    <optgroup label=\"In-Person\">\n                        <option value=\"networking\">We met at a networking event</option>\n                        <option value=\"referral\">Personal referral</option>\n                        <option value=\"random\">We met somewhere else</option>\n                    </optgroup>\n                    <option value=\"other\">Other</option>\n                </select>\n            </div>\n\n            <input type=\"submit\" value=\"Submit\">\n        </form>\n\n    </main>\n    ";
+};
+
+exports.default = _default;
+},{}],"components/views/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "about", {
+  enumerable: true,
+  get: function () {
+    return _about.default;
+  }
+});
+Object.defineProperty(exports, "blog", {
+  enumerable: true,
+  get: function () {
+    return _blog.default;
+  }
+});
+Object.defineProperty(exports, "home", {
+  enumerable: true,
+  get: function () {
+    return _home.default;
+  }
+});
+Object.defineProperty(exports, "contact", {
+  enumerable: true,
+  get: function () {
+    return _contact.default;
+  }
+});
+
+var _about = _interopRequireDefault(require("./about.js"));
+
+var _blog = _interopRequireDefault(require("./blog.js"));
+
+var _home = _interopRequireDefault(require("./home.js"));
+
+var _contact = _interopRequireDefault(require("./contact.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+},{"./about.js":"components/views/about.js","./blog.js":"components/views/blog.js","./home.js":"components/views/home.js","./contact.js":"components/views/contact.js"}],"store/about.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  title: 'About Me',
+  mainContent: 'About'
+};
+exports.default = _default;
+},{}],"store/blog.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  title: 'This is a Blog',
+  mainContent: 'Blog'
+}; // const blogArray = [
+//     {
+//         title: "clockwork",
+//         subtitle: "what time is it?",
+//         dateComplete: "10/10/2019",
+//         description: "shows you the time. pretty cool",
+//         technologiesUsed: "html, css, javascript, date",
+//         soloContributor: true,
+//         projectHighlights: "study time, nap time, party time",
+//         netlifyUrl: "https://clockaflocka.netlify.com/",
+//         githubUrl: "https://github.com/thomas-nelson23/Clockwork"
+//     },
+//     {
+//         title: "student showcase",
+//         subtitle: "nashville autumnal group project",
+//         dateComplete: "11/15/2019",
+//         description: "we learned soooo much about pull requests and merge conflicts",
+//         technologiesUsed: "html, css, javascript, github",
+//         soloContributor: false,
+//         projectHighlights: "work in progress!",
+//         netlifyUrl: "https://thomas-nelson.netlify.com/",
+//         githubUrl: "https://github.com/thomas-nelson23/ThomasNelson2"
+//     },
+//     {
+//         title: "palindromes",
+//         subtitle: "tacocat, racecar, dr awkward",
+//         dateComplete: "10/15/2019",
+//         description: "forwards, backwards, is there a difference?",
+//         technologiesUsed: "html, css, javascript, regex",
+//         soloContributor: true,
+//         projectHighlights: "one day the console will grow a tree",
+//         netlifyUrl: "https://palindromer.netlify.com/",
+//         githubUrl: "https://github.com/thomas-nelson23/Palindrome"
+//     },
+//     {
+//         title: "to-do list",
+//         subtitle: "learning jquery before angular was cool",
+//         dateComplete: "03/01/2017",
+//         description: "does not look nice. uses jquery to make a to-do list",
+//         technologiesUsed: "html, css, javascript, jquery",
+//         soloContributor: true,
+//         projectHighlights: "it is hideous",
+//         netlifyUrl: "https://whatchagonnado.netlify.com/",
+//         githubUrl: "https://github.com/thomas-nelson23/To-do"
+//     },
+//     {
+//         title: "dynamic dogs",
+//         subtitle: "barking up the right tree",
+//         dateComplete: "10/31/2019",
+//         description: "dynamically populates a page to show off prized puppers. this was a code-along with the class!",
+//         technologiesUsed: "html, css, javascript",
+//         soloContributor: true,
+//         projectHighlights: "template literals are literally the coolest",
+//         netlifyUrl: "https://dynamicdogs.netlify.com/",
+//         githubUrl: "https://github.com/thomas-nelson23/Dynamic-Dogs"
+//     },
+//     {
+//         title: "tic-tac-toe",
+//         subtitle: "that's what it is",
+//         dateComplete: "04/01/2017",
+//         description: "keeps score and other features",
+//         technologiesUsed: "html, css, javascript",
+//         soloContributor: true,
+//         projectHighlights: "pretty cool",
+//         netlifyUrl: "https://tic-tac-toe-thomas.netlify.com/",
+//         githubUrl: "https://github.com/thomas-nelson23/Tic-Tac-Toe"
+//     }
+// ];
+// var bloggy = document.getElementById("blogDiv");
+// for (var indexer = 0; indexer < blogArray.length; indexer++) {
+//     var blogTitle = blogArray[indexer].title.toUpperCase();
+//     var subtitle = blogArray[indexer].subtitle;
+//     var dateComplete = blogArray[indexer].dateComplete;
+//     var description = blogArray[indexer].description;
+//     var technologiesUsed = blogArray[indexer].technologiesUsed;
+//     var projectHighlights = blogArray[indexer].projectHighlights;
+//     var netlifyUrl = blogArray[indexer].netlifyUrl;
+//     var githubUrl = blogArray[indexer].githubUrl;
+//     bloggy.innerHTML += `<div class='entryDiv'><h2>${blogTitle}</h2>
+//         <h3>${subtitle}</h3>
+//         <strong>finished on ${dateComplete}</strong>
+//         <p>${description}</p>
+//         <div class='entryDetails'><p>Technologies used: ${technologiesUsed}</p>
+//         <p>Project highlights: ${projectHighlights}</p>
+//         <a href='${netlifyUrl}'><i class="fas fa-child"></i>view project</a><br>
+//             <a href='${githubUrl}'><i class="fab fa-github-alt"></i>view code</a><br><hr></div> 
+//         </div>`;
+// }
+
+exports.default = _default;
+},{}],"store/contact.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  title: 'Contact Me',
+  mainContent: 'Contact'
+};
+exports.default = _default;
+},{}],"store/home.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  title: 'Welcome to my Portfolio',
+  mainContent: "\n                <div class=\"hero\">\n                    <a href=\"#\" class=\"btn\">CTA</a>\n                </div>\n\n                <div class=\"text\">\n                <section class=\"content\">\n                    <h2>Hello</h2>\n                    <p>>I am a front-end web developer, audio engineer, and musician.</p>\n                    <a href=\"#\" class=\"btn btn--read\">Read More!</a>\n                </section>\n\n                <section class=\"content\">\n                    <h2>Something Else</h2>\n                    <p>more stufyy blah blahmore stufyy blah blahmore stufyy blah blahmore stufyy blah blahmore stufyy blah blahmore\n                    stufyy blah blah</p>\n                    <a href=\"#\" class=\"btn btn--read\">Read More!</a>\n                </section>\n\n                <section class=\"content\">\n                    <h2>And another one</h2>\n                    <p>more stufyy blah blahmore stufyy blah blahmore stufyy blah blahmore stufyy blah blahmore stufyy blah blah</p>\n                    <a href=\"#\" class=\"btn btn--read\">DON'T CLICK</a>\n                </section>\n                </div>\n        "
+};
+exports.default = _default;
+},{}],"store/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "about", {
+  enumerable: true,
+  get: function () {
+    return _about.default;
+  }
+});
+Object.defineProperty(exports, "blog", {
+  enumerable: true,
+  get: function () {
+    return _blog.default;
+  }
+});
+Object.defineProperty(exports, "contact", {
+  enumerable: true,
+  get: function () {
+    return _contact.default;
+  }
+});
+Object.defineProperty(exports, "home", {
+  enumerable: true,
+  get: function () {
+    return _home.default;
+  }
+});
+
+var _about = _interopRequireDefault(require("./about.js"));
+
+var _blog = _interopRequireDefault(require("./blog.js"));
+
+var _contact = _interopRequireDefault(require("./contact.js"));
+
+var _home = _interopRequireDefault(require("./home.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+},{"./about.js":"store/about.js","./blog.js":"store/blog.js","./contact.js":"store/contact.js","./home.js":"store/home.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _components = require("./components");
 
-var state = {
-  Home: {
-    heading: "test",
-    mainContent: "\n                <div class=\"hero\">\n                    <a href=\"#\" class=\"btn\">CTA</a>\n                </div>\n\n                <div class=\"text\">\n                <section class=\"content\">\n                    <h2>Hello</h2>\n                    <p>>I am a front-end web developer, audio engineer, and musician.</p>\n                    <a href=\"#\" class=\"btn btn--read\">Read More!</a>\n                </section>\n\n                <section class=\"content\">\n                    <h2>Something Else</h2>\n                    <p>more stufyy blah blahmore stufyy blah blahmore stufyy blah blahmore stufyy blah blahmore stufyy blah blahmore\n                    stufyy blah blah</p>\n                    <a href=\"#\" class=\"btn btn--read\">Read More!</a>\n                </section>\n\n                <section class=\"content\">\n                    <h2>And another one</h2>\n                    <p>more stufyy blah blahmore stufyy blah blahmore stufyy blah blahmore stufyy blah blahmore stufyy blah blah</p>\n                    <a href=\"#\" class=\"btn btn--read\">DON'T CLICK</a>\n                </section>\n                </div>\n        "
+var _views = require("./components/views");
+
+var state = _interopRequireWildcard(require("./store"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; if (obj != null) { var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function render(state) {
+  document.querySelector('#root').innerHTML = "\n    ".concat((0, _components.header)(state), "\n    ").concat((0, _components.nav)(), "\n    ").concat((0, _components.main)(st), "\n    ").concat((0, _components.footer)(), "\n");
+}
+
+function handleNavigation(event) {
+  var component = event.target.textContent;
+  event.preventDefault();
+  console.log(event.target.textContent);
+  render(state[component]);
+}
+
+render(state);
+document.querySelector('#navigation a').addEventListener('click', handleNavigation);
+document.querySelector('#navigation a:nth-child(2)').addEventListener('click', handleNavigation);
+document.querySelector('#navigation a:nth-child(3)').addEventListener('click', handleNavigation); //parallax effect (no additional code)
+
+var parallax = document.querySelector(".hero");
+window.addEventListener("scroll", function () {
+  var scrolledHeight = window.pageYOffset,
+      limit = parallax.offsetTop + parallax.offsetHeight;
+
+  if (scrolledHeight > parallax.offsetTop && scrolledHeight <= limit) {
+    parallax.style.backgroundPositionY = (scrolledHeight - parallax.offsetTop) / 1.5 + "px";
+  } else {
+    parallax.style.backgroundPositionY = (scrolledHeight - parallax.offsetTop) / 5 + "px";
   }
-};
-document.querySelector('#root').innerHTML = "\n".concat((0, _components.header)(state.Home), "\n").concat((0, _components.nav)(), "\n").concat((0, _components.main)(state.Home), "\n").concat((0, _components.footer)(), "\n");
-},{"./components":"components/index.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+});
+},{"./components":"components/index.js","./components/views":"components/views/index.js","./store":"store/index.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -249,7 +546,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49811" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50216" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

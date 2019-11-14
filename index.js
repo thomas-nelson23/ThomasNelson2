@@ -1,43 +1,52 @@
-import { header, nav, main, footer } from "./components";
+import { header, nav, main, footer } from './components';
+import { about, contact, blog, home } from './components/views';
 
-const state = {
-    Home: {
-        heading: "test",
-        mainContent: `
-                <div class="hero">
-                    <a href="#" class="btn">CTA</a>
-                </div>
-
-                <div class="text">
-                <section class="content">
-                    <h2>Hello</h2>
-                    <p>>I am a front-end web developer, audio engineer, and musician.</p>
-                    <a href="#" class="btn btn--read">Read More!</a>
-                </section>
-
-                <section class="content">
-                    <h2>Something Else</h2>
-                    <p>more stufyy blah blahmore stufyy blah blahmore stufyy blah blahmore stufyy blah blahmore stufyy blah blahmore
-                    stufyy blah blah</p>
-                    <a href="#" class="btn btn--read">Read More!</a>
-                </section>
-
-                <section class="content">
-                    <h2>And another one</h2>
-                    <p>more stufyy blah blahmore stufyy blah blahmore stufyy blah blahmore stufyy blah blahmore stufyy blah blah</p>
-                    <a href="#" class="btn btn--read">DON'T CLICK</a>
-                </section>
-                </div>
-        `
-    }
-};
+import * as state from "./store";
 
 
-
-
-document.querySelector('#root').innerHTML = `
-${ header(state.Home)}
-${ nav()}
-${ main(state.Home)}
-${ footer()}
+function render(state) {
+    document.querySelector('#root').innerHTML = `
+    ${header(state)}
+    ${nav()}
+    ${main(st)}
+    ${footer()}
 `;
+}
+
+function handleNavigation(event) {
+    const component = event.target.textContent;
+    event.preventDefault();
+    console.log(event.target.textContent)
+    render(state[component]);
+}
+
+
+render(state);
+
+
+document.querySelector('#navigation a')
+    .addEventListener('click', handleNavigation);
+
+document.querySelector('#navigation a:nth-child(2)')
+    .addEventListener('click', handleNavigation);
+
+document.querySelector('#navigation a:nth-child(3)')
+    .addEventListener('click', handleNavigation);
+
+
+
+
+
+
+
+//parallax effect (no additional code)
+var parallax = document.querySelector(".hero");
+window.addEventListener("scroll", function () {
+    var scrolledHeight = window.pageYOffset,
+        limit = parallax.offsetTop + parallax.offsetHeight;
+    if (scrolledHeight > parallax.offsetTop && scrolledHeight <= limit) {
+        parallax.style.backgroundPositionY = (scrolledHeight - parallax.offsetTop) / 1.5 + "px";
+    } else {
+        parallax.style.backgroundPositionY = (scrolledHeight - parallax.offsetTop) / 5 + "px";
+    }
+});
