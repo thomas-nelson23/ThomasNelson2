@@ -19,5 +19,8 @@
     "stylelint-config-standard": "^19.0.0",
     "stylelint-prettier": "^1.1.1",
     "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "navigo": "^7.1.2"
   }
 }

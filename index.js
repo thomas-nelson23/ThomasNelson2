@@ -3,8 +3,8 @@ import { about, contact, blog, home } from './components/mainContent';
 
 import * as state from "./store";
 
-//import Navigo from "Navigo";
-//const router = new Navigo(location.origin)
+import Navigo from "Navigo";
+const router = new Navigo(location.origin);
 
 
 function render(state) {
@@ -19,37 +19,37 @@ function render(state) {
 
 
 
-function handleNavigation(event) {
-    const component = event.target.textContent;
-    event.preventDefault();
-    console.log(event.target.textContent)
-    render(state[component]);
-}
+// function handleNavigation(event) {
+//     const component = event.target.textContent;
+//     event.preventDefault();
+//     console.log(event.target.textContent)
+//     render(state[component]);
+// }
 
-// router.on(":page", params =>
-//     render(
-//         state[
-//         `${params.page.slice(0, 1).toUpperCase()}${params.page
-//             .slice(1)
-//             .toLowerCase()}`
-//         ]
-//     )
-//         .on("/", render())
-//         .resolve();
-// );
+router.on(":page", params =>
+    render(
+        state[
+        `${params.page.slice(0, 1).toUpperCase()}${params.page
+            .slice(1)
+            .toLowerCase()}`
+        ]
+    )
+        .on("/", render())
+        .resolve()
+);
 
 
 render(state);
 
 
-document.querySelector('#navigation a')
-    .addEventListener('click', handleNavigation);
+// document.querySelector('#navigation a')
+//     .addEventListener('click', handleNavigation);
 
-document.querySelector('#navigation a:nth-child(2)')
-    .addEventListener('click', handleNavigation);
+// document.querySelector('#navigation a:nth-child(2)')
+//     .addEventListener('click', handleNavigation);
 
-document.querySelector('#navigation a:nth-child(3)')
-    .addEventListener('click', handleNavigation);
+// document.querySelector('#navigation a:nth-child(3)')
+//     .addEventListener('click', handleNavigation);
 
 
 
