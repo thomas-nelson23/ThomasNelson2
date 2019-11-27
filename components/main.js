@@ -1,7 +1,7 @@
-// import * as 
+import * as mainContent from "./mainContent";
 
-export default (st) => `
+export default st => `
     <main>
-        ${st.mainContent}
+        ${mainContent[st.mainContent](st)}
     </main>
 `
