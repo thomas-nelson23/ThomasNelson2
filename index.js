@@ -25,11 +25,9 @@ router.on(":page", params =>
             .toLowerCase()}`
         ]
     )
-
 )
     .on("/", render())
-    .resolve()
-
+    .resolve();
 
 
 // function handleNavigation(event) {
