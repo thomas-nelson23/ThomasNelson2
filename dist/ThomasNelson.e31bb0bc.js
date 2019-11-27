@@ -130,179 +130,7 @@ var _default = function _default(st) {
 };
 
 exports.default = _default;
-},{}],"components/nav.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _default = function _default() {
-  return "\n<nav>\n<span class=\"fas burger fa-bars is-hidden--tablet\"></span>\n\n    <ul id=\"navigation\" class=\"is-shown--tablet\">\n        <a href=\"\">\n            <li class=navLi>Home</li>\n        </a>\n        <a href=\"/about/index.html\">\n            <li class=navLi>About</li>\n        </a>\n        <a href=\"/blog/index.html\">\n            <li class=navLi>Blog</li>\n        </a>\n        <a href=\"/projects/index.html\">\n            <li class=navLi>Projects</li>\n        </a>\n        <a href=\"/contact/index.html\">\n            <li class=navLi>Contact</li>\n        </a>\n    </ul>\n</nav>\n\n";
-};
-
-exports.default = _default;
-},{}],"components/main.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-// import * as 
-var _default = function _default(st) {
-  return "\n    <main>\n        ".concat(st.mainContent, "\n    </main>\n");
-};
-
-exports.default = _default;
-},{}],"components/footer.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _default = function _default() {
-  return "\n<footer>\n<br />\n<a href=\"https://github.com/thomas-nelson23\" target=\"blank\">Github<i class=\"fab fa-github\"></i></a>\n\n2019 Savvy Coders\n</footer>\n";
-};
-
-exports.default = _default;
-},{}],"components/index.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-Object.defineProperty(exports, "header", {
-  enumerable: true,
-  get: function () {
-    return _header.default;
-  }
-});
-Object.defineProperty(exports, "nav", {
-  enumerable: true,
-  get: function () {
-    return _nav.default;
-  }
-});
-Object.defineProperty(exports, "main", {
-  enumerable: true,
-  get: function () {
-    return _main.default;
-  }
-});
-Object.defineProperty(exports, "footer", {
-  enumerable: true,
-  get: function () {
-    return _footer.default;
-  }
-});
-
-var _header = _interopRequireDefault(require("./header"));
-
-var _nav = _interopRequireDefault(require("./nav"));
-
-var _main = _interopRequireDefault(require("./main"));
-
-var _footer = _interopRequireDefault(require("./footer"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./header":"components/header.js","./nav":"components/nav.js","./main":"components/main.js","./footer":"components/footer.js"}],"components/views/about.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _default = function _default(st) {
-  "\n        <h1>About landing page</h1>\n    ";
-};
-
-exports.default = _default;
-},{}],"components/views/blog.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _default = function _default(st) {
-  "\n        <h3>".concat(st.title, "</h3>\n        <div id=\"blogDiv\"></div>\n    ");
-};
-
-exports.default = _default;
-},{}],"components/views/home.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _default = function _default(st) {
-  "\n        <h1>".concat(st.title, "</h1>\n    ");
-};
-
-exports.default = _default;
-},{}],"components/views/contact.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _default = function _default(st) {
-  "\n        <main class=\"container\">\n\n        <h4>form</h4>\n\n        <form name=\"contact\" method=\"POST\" data-netlify=\"true\">\n            <div>\n                <label for=\"name\">Name: </label>\n                <input type=\"text\" name=\"name\" id=\"name\" placeholder=\"Full Name\">\n            </div>\n            <div>\n                <label for=\"email\">Email: </label>\n                <input type=\"text\" name=\"email\" id=\"email\" placeholder=\"you@somewhere.com\">\n            </div>\n            <div>\n                <label for=\"phone\">Phone: </label>\n                <input type=\"tel\" name=\"phone\" id=\"phone\">\n            </div>\n            <div>\n                <label for=\"message\">Enter your message: </label>\n                <textarea name=\"msg\" id=\"msg\" cols=\"30\" rows=\"10\"></textarea>\n            </div>\n\n            <p>What's this message about?</p>\n\n            <div>\n                <input type=\"radio\" name=\"subject\" value=\"professional\" id=\"pro\" checked>\n                <label for=\"pro\">I'd like to hire you!</label>\n            </div>\n\n            <div>\n                <input type=\"radio\" name=\"subject\" value=\"personal\" id=\"personal\">\n                <label for=\"personal\">Personal message</label>\n            </div>\n\n            <div>\n                <input type=\"radio\" name=\"subject\" value=\"other\">\n                <label>Don't know/something else</label>\n            </div>\n\n            <div>\n                <input type=\"checkbox\" name=\"optin\" value=\"trusting\" id=\"news\" checked>\n                <label for=\"news\">Subscribe me to your newsletter!</label>\n            </div>\n\n\n            <div>\n                <label for=\"marketing\">How did you hear about me?</label>\n                <select name=\"marketing\">\n                    <optgroup label=\"Online\">\n                        <option value=\"social\">Social Media (FB, Twitter, LinkedIn)</option>\n                        <option value=\"github\">Online Portfolio (GitHub)</option>\n                        <option value=\"search\">Search Engine</option>\n                        <option value=\"email\">Email</option>\n                    </optgroup>\n                    <optgroup label=\"In-Person\">\n                        <option value=\"networking\">We met at a networking event</option>\n                        <option value=\"referral\">Personal referral</option>\n                        <option value=\"random\">We met somewhere else</option>\n                    </optgroup>\n                    <option value=\"other\">Other</option>\n                </select>\n            </div>\n\n            <input type=\"submit\" value=\"Submit\">\n        </form>\n\n    </main>\n    ";
-};
-
-exports.default = _default;
-},{}],"components/views/index.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-Object.defineProperty(exports, "about", {
-  enumerable: true,
-  get: function () {
-    return _about.default;
-  }
-});
-Object.defineProperty(exports, "blog", {
-  enumerable: true,
-  get: function () {
-    return _blog.default;
-  }
-});
-Object.defineProperty(exports, "home", {
-  enumerable: true,
-  get: function () {
-    return _home.default;
-  }
-});
-Object.defineProperty(exports, "contact", {
-  enumerable: true,
-  get: function () {
-    return _contact.default;
-  }
-});
-
-var _about = _interopRequireDefault(require("./about.js"));
-
-var _blog = _interopRequireDefault(require("./blog.js"));
-
-var _home = _interopRequireDefault(require("./home.js"));
-
-var _contact = _interopRequireDefault(require("./contact.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./about.js":"components/views/about.js","./blog.js":"components/views/blog.js","./home.js":"components/views/home.js","./contact.js":"components/views/contact.js"}],"store/about.js":[function(require,module,exports) {
+},{}],"store/about.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -438,6 +266,15 @@ var _default = {
   mainContent: "\n                <div class=\"hero\">\n                    <a href=\"#\" class=\"btn\">CTA</a>\n                </div>\n\n                <div class=\"text\">\n                <section class=\"content\">\n                    <h2>Hello</h2>\n                    <p>>I am a front-end web developer, audio engineer, and musician.</p>\n                    <a href=\"#\" class=\"btn btn--read\">Read More!</a>\n                </section>\n\n                <section class=\"content\">\n                    <h2>Something Else</h2>\n                    <p>more stufyy blah blahmore stufyy blah blahmore stufyy blah blahmore stufyy blah blahmore stufyy blah blahmore\n                    stufyy blah blah</p>\n                    <a href=\"#\" class=\"btn btn--read\">Read More!</a>\n                </section>\n\n                <section class=\"content\">\n                    <h2>And another one</h2>\n                    <p>more stufyy blah blahmore stufyy blah blahmore stufyy blah blahmore stufyy blah blahmore stufyy blah blah</p>\n                    <a href=\"#\" class=\"btn btn--read\">DON'T CLICK</a>\n                </section>\n                </div>\n        "
 };
 exports.default = _default;
+},{}],"store/Links.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = ["Home", "About", "Contact", "Blog", "Gallery"];
+exports.default = _default;
 },{}],"store/index.js":[function(require,module,exports) {
 "use strict";
 
@@ -468,6 +305,12 @@ Object.defineProperty(exports, "home", {
     return _home.default;
   }
 });
+Object.defineProperty(exports, "Links", {
+  enumerable: true,
+  get: function () {
+    return _Links.default;
+  }
+});
 
 var _about = _interopRequireDefault(require("./about.js"));
 
@@ -477,13 +320,212 @@ var _contact = _interopRequireDefault(require("./contact.js"));
 
 var _home = _interopRequireDefault(require("./home.js"));
 
+var _Links = _interopRequireDefault(require("./Links"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./about.js":"store/about.js","./blog.js":"store/blog.js","./contact.js":"store/contact.js","./home.js":"store/home.js"}],"index.js":[function(require,module,exports) {
+},{"./about.js":"store/about.js","./blog.js":"store/blog.js","./contact.js":"store/contact.js","./home.js":"store/home.js","./Links":"store/Links.js"}],"components/nav.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _store = require("../store");
+
+function linksBuilder(links) {
+  return links.map(function (link) {
+    return "<li class=navLi><a href=\"./".concat(link, "\">").concat(link, "</a></li>");
+  }).join();
+}
+
+console.log(linksBuilder(_store.Links));
+
+var _default = function _default() {
+  return "\n<nav>\n<span class=\"fas burger fa-bars is-hidden--tablet\"></span>\n\n    <ul id=\"navigation\" class=\"is-shown--tablet\">\n        ".concat(linksBuilder(_store.Links), "\n    </ul>\n</nav>\n");
+}; // < a href = "" >
+//     <li class=navLi>Home</li>
+//     </a >
+// <a href="/about/index.html">
+//     <li class=navLi>About</li>
+// </a>
+// <a href="/blog/index.html">
+//     <li class=navLi>Blog</li>
+// </a>
+// <a href="/projects/index.html">
+//     <li class=navLi>Projects</li>
+// </a>
+// <a href="/contact/index.html">
+//     <li class=navLi>Contact</li>
+// </a>
+
+
+exports.default = _default;
+},{"../store":"store/index.js"}],"components/main.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+// import * as 
+var _default = function _default(st) {
+  return "\n    <main>\n        ".concat(st.mainContent, "\n    </main>\n");
+};
+
+exports.default = _default;
+},{}],"components/footer.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _default = function _default() {
+  return "\n<footer>\n<br />\n<a href=\"https://github.com/thomas-nelson23\" target=\"blank\">Github<i class=\"fab fa-github\"></i></a>\n\n2019 Savvy Coders\n</footer>\n";
+};
+
+exports.default = _default;
+},{}],"components/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "header", {
+  enumerable: true,
+  get: function () {
+    return _header.default;
+  }
+});
+Object.defineProperty(exports, "nav", {
+  enumerable: true,
+  get: function () {
+    return _nav.default;
+  }
+});
+Object.defineProperty(exports, "main", {
+  enumerable: true,
+  get: function () {
+    return _main.default;
+  }
+});
+Object.defineProperty(exports, "footer", {
+  enumerable: true,
+  get: function () {
+    return _footer.default;
+  }
+});
+
+var _header = _interopRequireDefault(require("./header"));
+
+var _nav = _interopRequireDefault(require("./nav"));
+
+var _main = _interopRequireDefault(require("./main"));
+
+var _footer = _interopRequireDefault(require("./footer"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+},{"./header":"components/header.js","./nav":"components/nav.js","./main":"components/main.js","./footer":"components/footer.js"}],"components/mainContent/about.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _default = function _default(st) {
+  "\n        <h1>About landing page</h1>\n    ";
+};
+
+exports.default = _default;
+},{}],"components/mainContent/blog.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _default = function _default(st) {
+  "\n        <h3>".concat(st.title, "</h3>\n        <div id=\"blogDiv\"></div>\n    ");
+};
+
+exports.default = _default;
+},{}],"components/mainContent/home.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _default = function _default(st) {
+  "\n        <h1>".concat(st.title, "</h1>\n    ");
+};
+
+exports.default = _default;
+},{}],"components/mainContent/contact.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _default = function _default(st) {
+  "\n        <main class=\"container\">\n\n        <h4>form</h4>\n\n        <form name=\"contact\" method=\"POST\" data-netlify=\"true\">\n            <div>\n                <label for=\"name\">Name: </label>\n                <input type=\"text\" name=\"name\" id=\"name\" placeholder=\"Full Name\">\n            </div>\n            <div>\n                <label for=\"email\">Email: </label>\n                <input type=\"text\" name=\"email\" id=\"email\" placeholder=\"you@somewhere.com\">\n            </div>\n            <div>\n                <label for=\"phone\">Phone: </label>\n                <input type=\"tel\" name=\"phone\" id=\"phone\">\n            </div>\n            <div>\n                <label for=\"message\">Enter your message: </label>\n                <textarea name=\"msg\" id=\"msg\" cols=\"30\" rows=\"10\"></textarea>\n            </div>\n\n            <p>What's this message about?</p>\n\n            <div>\n                <input type=\"radio\" name=\"subject\" value=\"professional\" id=\"pro\" checked>\n                <label for=\"pro\">I'd like to hire you!</label>\n            </div>\n\n            <div>\n                <input type=\"radio\" name=\"subject\" value=\"personal\" id=\"personal\">\n                <label for=\"personal\">Personal message</label>\n            </div>\n\n            <div>\n                <input type=\"radio\" name=\"subject\" value=\"other\">\n                <label>Don't know/something else</label>\n            </div>\n\n            <div>\n                <input type=\"checkbox\" name=\"optin\" value=\"trusting\" id=\"news\" checked>\n                <label for=\"news\">Subscribe me to your newsletter!</label>\n            </div>\n\n\n            <div>\n                <label for=\"marketing\">How did you hear about me?</label>\n                <select name=\"marketing\">\n                    <optgroup label=\"Online\">\n                        <option value=\"social\">Social Media (FB, Twitter, LinkedIn)</option>\n                        <option value=\"github\">Online Portfolio (GitHub)</option>\n                        <option value=\"search\">Search Engine</option>\n                        <option value=\"email\">Email</option>\n                    </optgroup>\n                    <optgroup label=\"In-Person\">\n                        <option value=\"networking\">We met at a networking event</option>\n                        <option value=\"referral\">Personal referral</option>\n                        <option value=\"random\">We met somewhere else</option>\n                    </optgroup>\n                    <option value=\"other\">Other</option>\n                </select>\n            </div>\n\n            <input type=\"submit\" value=\"Submit\">\n        </form>\n\n    </main>\n    ";
+};
+
+exports.default = _default;
+},{}],"components/mainContent/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "about", {
+  enumerable: true,
+  get: function () {
+    return _about.default;
+  }
+});
+Object.defineProperty(exports, "blog", {
+  enumerable: true,
+  get: function () {
+    return _blog.default;
+  }
+});
+Object.defineProperty(exports, "home", {
+  enumerable: true,
+  get: function () {
+    return _home.default;
+  }
+});
+Object.defineProperty(exports, "contact", {
+  enumerable: true,
+  get: function () {
+    return _contact.default;
+  }
+});
+
+var _about = _interopRequireDefault(require("./about.js"));
+
+var _blog = _interopRequireDefault(require("./blog.js"));
+
+var _home = _interopRequireDefault(require("./home.js"));
+
+var _contact = _interopRequireDefault(require("./contact.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+},{"./about.js":"components/mainContent/about.js","./blog.js":"components/mainContent/blog.js","./home.js":"components/mainContent/home.js","./contact.js":"components/mainContent/contact.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _components = require("./components");
 
-var _views = require("./components/views");
+var _mainContent = require("./components/mainContent");
 
 var state = _interopRequireWildcard(require("./store"));
 
@@ -491,8 +533,11 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; if (obj != null) { var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
+//import Navigo from "Navigo";
+//const router = new Navigo(location.origin)
 function render(state) {
-  document.querySelector('#root').innerHTML = "\n    ".concat((0, _components.header)(state), "\n    ").concat((0, _components.nav)(), "\n    ").concat((0, _components.main)(st), "\n    ").concat((0, _components.footer)(), "\n");
+  document.querySelector('#root').innerHTML = "\n    ".concat((0, _components.header)(state), "\n    ").concat((0, _components.nav)(), "\n    ").concat((0, _components.main)(state), "\n    ").concat((0, _components.footer)(), "\n");
+  router.updatePageLinks();
 }
 
 function handleNavigation(event) {
@@ -500,7 +545,18 @@ function handleNavigation(event) {
   event.preventDefault();
   console.log(event.target.textContent);
   render(state[component]);
-}
+} // router.on(":page", params =>
+//     render(
+//         state[
+//         `${params.page.slice(0, 1).toUpperCase()}${params.page
+//             .slice(1)
+//             .toLowerCase()}`
+//         ]
+//     )
+//         .on("/", render())
+//         .resolve();
+// );
+
 
 render(state);
 document.querySelector('#navigation a').addEventListener('click', handleNavigation);
@@ -518,7 +574,7 @@ window.addEventListener("scroll", function () {
     parallax.style.backgroundPositionY = (scrolledHeight - parallax.offsetTop) / 5 + "px";
   }
 });
-},{"./components":"components/index.js","./components/views":"components/views/index.js","./store":"store/index.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./components":"components/index.js","./components/mainContent":"components/mainContent/index.js","./store":"store/index.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -546,7 +602,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50216" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52552" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

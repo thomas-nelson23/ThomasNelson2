@@ -1,17 +1,23 @@
 import { header, nav, main, footer } from './components';
-import { about, contact, blog, home } from './components/views';
+import { about, contact, blog, home } from './components/mainContent';
 
 import * as state from "./store";
+
+//import Navigo from "Navigo";
+//const router = new Navigo(location.origin)
 
 
 function render(state) {
     document.querySelector('#root').innerHTML = `
     ${header(state)}
     ${nav()}
-    ${main(st)}
+    ${main(state)}
     ${footer()}
 `;
+    router.updatePageLinks();
 }
+
+
 
 function handleNavigation(event) {
     const component = event.target.textContent;
@@ -19,6 +25,18 @@ function handleNavigation(event) {
     console.log(event.target.textContent)
     render(state[component]);
 }
+
+// router.on(":page", params =>
+//     render(
+//         state[
+//         `${params.page.slice(0, 1).toUpperCase()}${params.page
+//             .slice(1)
+//             .toLowerCase()}`
+//         ]
+//     )
+//         .on("/", render())
+//         .resolve();
+// );
 
 
 render(state);
@@ -32,10 +50,6 @@ document.querySelector('#navigation a:nth-child(2)')
 
 document.querySelector('#navigation a:nth-child(3)')
     .addEventListener('click', handleNavigation);
-
-
-
-
 
 
 
