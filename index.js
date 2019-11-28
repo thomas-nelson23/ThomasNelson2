@@ -1,6 +1,6 @@
 import { Header, Nav, Main, Footer } from './components';
 import * as state from "./store";
-
+import { capitalize } from "lodash";
 import Navigo from "Navigo";
 const router = new Navigo(location.origin);
 
@@ -18,16 +18,9 @@ function render(st = state.Home) {
 
 
 router
-    .on(":page", params => render(
-        state[
-        `${params.page.slice(0, 1).toUpperCase()}${params.page
-            .slice(1)
-            .toLowerCase()}`
-        ]
-    ))
-    .on("/", render())
+    .on(":page", params => render(state[capitalize(params.page)]))
+    .on("/", () => render())
     .resolve();
-
 
 
 
