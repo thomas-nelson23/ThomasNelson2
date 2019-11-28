@@ -50,13 +50,13 @@ router.on(":page", params =>
 
 
 //parallax effect (no additional code)
-var parallax = document.querySelector(".hero");
-window.addEventListener("scroll", function () {
-    var scrolledHeight = window.pageYOffset,
-        limit = parallax.offsetTop + parallax.offsetHeight;
-    if (scrolledHeight > parallax.offsetTop && scrolledHeight <= limit) {
-        parallax.style.backgroundPositionY = (scrolledHeight - parallax.offsetTop) / 1.5 + "px";
-    } else {
-        parallax.style.backgroundPositionY = (scrolledHeight - parallax.offsetTop) / 5 + "px";
-    }
-});
+// var parallax = document.querySelector(".hero");
+// window.addEventListener("scroll", function () {
+//     var scrolledHeight = window.pageYOffset,
+//         limit = parallax.offsetTop + parallax.offsetHeight;
+//     if (scrolledHeight > parallax.offsetTop && scrolledHeight <= limit) {
+//         parallax.style.backgroundPositionY = (scrolledHeight - parallax.offsetTop) / 1.5 + "px";
+//     } else {
+//         parallax.style.backgroundPositionY = (scrolledHeight - parallax.offsetTop) / 5 + "px";
+//     }
+// });

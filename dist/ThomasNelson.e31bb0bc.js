@@ -568,18 +568,16 @@ router.on(":page", function (params) {
 // document.querySelector('#navigation a:nth-child(3)')
 //     .addEventListener('click', handleNavigation);
 //parallax effect (no additional code)
-
-var parallax = document.querySelector(".hero");
-window.addEventListener("scroll", function () {
-  var scrolledHeight = window.pageYOffset,
-      limit = parallax.offsetTop + parallax.offsetHeight;
-
-  if (scrolledHeight > parallax.offsetTop && scrolledHeight <= limit) {
-    parallax.style.backgroundPositionY = (scrolledHeight - parallax.offsetTop) / 1.5 + "px";
-  } else {
-    parallax.style.backgroundPositionY = (scrolledHeight - parallax.offsetTop) / 5 + "px";
-  }
-});
+// var parallax = document.querySelector(".hero");
+// window.addEventListener("scroll", function () {
+//     var scrolledHeight = window.pageYOffset,
+//         limit = parallax.offsetTop + parallax.offsetHeight;
+//     if (scrolledHeight > parallax.offsetTop && scrolledHeight <= limit) {
+//         parallax.style.backgroundPositionY = (scrolledHeight - parallax.offsetTop) / 1.5 + "px";
+//     } else {
+//         parallax.style.backgroundPositionY = (scrolledHeight - parallax.offsetTop) / 5 + "px";
+//     }
+// });
 },{"./components":"components/index.js","./store":"store/index.js","Navigo":"node_modules/Navigo/lib/navigo.min.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -608,7 +606,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49785" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52002" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
