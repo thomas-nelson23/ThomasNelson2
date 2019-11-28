@@ -1,51 +1,35 @@
-import { header, nav, main, footer } from './components';
-
+import { Header, Nav, Main, Footer } from './components';
 import * as state from "./store";
 
 import Navigo from "Navigo";
 const router = new Navigo(location.origin);
 
 
-function render(st = state.home) {
+function render(st = state.Home) {
+    // console.log(st);
     document.querySelector('#root').innerHTML = `
-    ${header(st)}
-    ${nav()}
-    ${main(st)}
-    ${footer()}
+    ${Header(st)}
+    ${Nav()}
+    ${Main(st)}
+    ${Footer()}
 `;
     router.updatePageLinks();
 }
 
 
-router.on(":page", params =>
-    render(
+router
+    .on(":page", params => render(
         state[
         `${params.page.slice(0, 1).toUpperCase()}${params.page
             .slice(1)
             .toLowerCase()}`
         ]
-    )
-)
+    ))
     .on("/", render())
     .resolve();
 
 
-// function handleNavigation(event) {
-//     const component = event.target.textContent;
-//     event.preventDefault();
-//     console.log(event.target.textContent)
-//     render(state[component]);
-// }
 
-
-// document.querySelector('#navigation a')
-//     .addEventListener('click', handleNavigation);
-
-// document.querySelector('#navigation a:nth-child(2)')
-//     .addEventListener('click', handleNavigation);
-
-// document.querySelector('#navigation a:nth-child(3)')
-//     .addEventListener('click', handleNavigation);
 
 
 

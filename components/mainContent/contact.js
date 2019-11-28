@@ -1,4 +1,4 @@
-export default (st) => {
+export default () =>
     `
         <main class="container">
 
@@ -68,4 +68,3 @@ export default (st) => {
 
     </main>
     `
-}

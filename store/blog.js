@@ -5,7 +5,7 @@ export default {
 
 
 
-// const blogArray = [
+// const blogArray = 
 //     {
 //         title: "clockwork",
 //         subtitle: "what time is it?",
@@ -72,7 +72,7 @@ export default {
 //         netlifyUrl: "https://tic-tac-toe-thomas.netlify.com/",
 //         githubUrl: "https://github.com/thomas-nelson23/Tic-Tac-Toe"
 //     }
-// ];
+// ;
 
 // var bloggy = document.getElementById("blogDiv");
 
@@ -95,6 +95,6 @@ export default {
 //         <a href='${netlifyUrl}'><i class="fas fa-child"></i>view project</a><br>
 //             <a href='${githubUrl}'><i class="fab fa-github-alt"></i>view code</a><br><hr></div> 
 //         </div>`;
-// }
+// 
 
 

@@ -5,7 +5,7 @@ function linksBuilder(links) {
     return links.map(link => `<li class=navLi><a href="./${link}">${link}</a></li>`).join()
 }
 
-console.log(linksBuilder(Links))
+// console.log(linksBuilder(Links))
 
 export default () => `
 <nav>
